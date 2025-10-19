@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta Mágica 💌</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Great+Vibes&display=swap');
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #1b1b1b, #000);
+      color: #f5deb3;
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #d4af37;
+      text-shadow: 0 0 10px #d4af37;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 30px auto 80px auto;
+      max-width: 750px;
+      line-height: 1.7;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid #d4af37;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(212,175,55,0.3);
+    }
+
+    .firma {
+      margin-top: 30px;
+      font-style: italic;
+      color: #b8860b;
+    }
+
+    /* Efecto de chispas mágicas */
+    .sparkle {
+      position: fixed;
+      width: 4px;
+      height: 4px;
+      background: #ffd700;
+      border-radius: 50%;
+      animation: twinkle 3s infinite ease-in-out;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+
+    /* Asegura que el contenido esté sobre las chispas */
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>💌 Carta Mágica para Mi Amor 💫</h1>
+
+    <p>
+      Nos conocimos el año pasado, cuando nuestros caminos se cruzaron casi sin intención.  
+      En aquel entonces, el destino te tenía viviendo otra historia, y lo entendí…  
+      porque los tiempos del corazón no siempre coinciden. 🌙  
+      <br><br>
+
+      No fue amor a primera vista, ni un hechizo inmediato.  
+      Fue algo más real, más tranquilo, como una magia que se va tejiendo sin que uno se dé cuenta.  
+      <br><br>
+
+      A inicios de este año, cuando tu historia anterior llegó a su fin, comenzamos a hablar más,  
+      y poco a poco nuestra amistad se transformó en algo más cálido, más sincero, más nuestro. ✨  
+      <br><br>
+
+      Hace solo un par de semanas, sentí que todo cambió.  
+      Como si las estrellas se hubieran alineado y Dumbledore hubiera susurrado:  
+      “es hora de dejar que la magia haga su trabajo”. 💞  
+      <br><br>
+
+      No fue un encantamiento repentino, sino una conexión que nació de la confianza,  
+      la risa y los momentos compartidos.  
+      Y ahora, sin necesidad de varitas ni hechizos, sé que algo especial está floreciendo entre nosotros.  
+      <br><br>
+
+      Con todo mi cariño,  
+      <br>✨ Tu mago favorito 🪄
+    </p>
+  </div>
+
+  <script>
+    // Crear chispas mágicas flotantes
+    for(let i=0; i<30; i++) {
+      const star = document.createElement('div');
+      star.className = 'sparkle';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDelay = (Math.random() * 3) + 's';
+      document.body.appendChild(star);
+    }
+  </script>
+</body>
+</html>
